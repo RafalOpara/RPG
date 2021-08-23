@@ -1,15 +1,9 @@
 #include "gra.h"
 
-void interface(Wojownik)
+void interface(const Heros *heros)
 {
 
 
-	cout << "Imie: " << imie.name <<"                                 Lvl:" << level << endl;
-	cout << "Hp: " << "/" << hpMax << "						         exp: " << exp << " / " << expNext << endl;
-	cout << "Energia: " << energy << endl;
-
-
-
+	cout << "Twoj heros:" << heros->name << "zdrowie:" << heros->hp; 
 
 }
-

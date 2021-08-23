@@ -1,7 +1,7 @@
 
 
 #include "gra.h"
-void staty();
+
 
 
 using namespace std;
@@ -9,12 +9,15 @@ using namespace std;
 int wybor;
 int wybor_bohatera;
 Heros* wsk;
+Heros* heros;
 string imie;
+
+
 
 //POSTACIE 
 
 
-Wojownik::Wojownik(string n, int lvl, int xp, int xpn, int h, int hpm, int en,int dmgm, int dmgma, int def)
+Heros::Heros(string n, int lvl, int xp, int xpn, int h, int hpm, int en,int dmgm, int dmgma, int def)
 {
 	name = n;
 	level = lvl;
@@ -30,10 +33,42 @@ Wojownik::Wojownik(string n, int lvl, int xp, int xpn, int h, int hpm, int en,in
 
 	
 }
+Heros::~Heros()
+{
+	cout << "kasuje dane" << endl;
+}
+
+
+
+
+/// /////////////////////////////
+
+
+
+
+Wojownik::Wojownik(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def)
+{
+	name = n;
+	level = lvl;
+	exp = xp;
+	expNext = xpn;
+	hp = h;
+	hpMax = hpm;
+	energy = en;
+	damageMin = dmgm;
+	damageMax = dmgma;
+	defence = def;
+
+
+
+}
 Wojownik::~Wojownik()
 {
 	cout << "kasuje dane" << endl;
 }
+
+
+
 
 void Wojownik::attack()
 {
@@ -56,6 +91,7 @@ void Wojownik::interface()
 	;
 }
 
+///////////////////////////////////
 
 Mag::Mag(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def)
 {
@@ -78,6 +114,8 @@ Mag::~Mag()
 	cout << "kasuje dane" << endl;
 }
 
+
+
 void Mag::attack()
 {
 	;
@@ -96,10 +134,8 @@ void Mag::powitanie()
 
 void Mag::interface()
 {
-	cout << Mag.lvl << endl;
+	;
 }
-
-
 
 
 
@@ -129,7 +165,7 @@ void menu()
 	case 1:
 		start();
 		break;
-	deafault:
+	default:
 		break;
 	}
 
@@ -170,11 +206,11 @@ void start()
 		cin >> imie;
 		
 
-		Mag imie(imie);
+		 Mag imie(imie);
 
-		wsk = &imie;
-		wsk->powitanie();
-		//wsk->interface( );
+		
+		heros->powitanie();
+		heros->interface();
 
 		
 	}

@@ -1,5 +1,5 @@
-﻿  gra.cpp
-C:\Nauka\GRA\GRA\GRA\gra.cpp(118,10): warning C4102: "deafault": etykieta, do której nie istnieje odwołanie
+﻿  dzialania.cpp
+  gra.cpp
   main.cpp
   Generowanie kodu...
   GRA.vcxproj -> C:\Nauka\GRA\GRA\Debug\GRA.exe
