@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dzialania.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="gra.cpp" />
   </ItemGroup>

@@ -1,11 +1,5 @@
 ﻿  gra.cpp
-C:\Nauka\GRA\GRA\GRA\gra.cpp(47,2): error C2065: "cout": niezadeklarowany identyfikator
-C:\Nauka\GRA\GRA\GRA\gra.cpp(47,37): error C2065: "endl": niezadeklarowany identyfikator
-C:\Nauka\GRA\GRA\GRA\gra.cpp(48,2): error C2065: "cout": niezadeklarowany identyfikator
-C:\Nauka\GRA\GRA\GRA\gra.cpp(48,28): error C2065: "endl": niezadeklarowany identyfikator
-C:\Nauka\GRA\GRA\GRA\gra.cpp(49,2): error C2065: "cout": niezadeklarowany identyfikator
-C:\Nauka\GRA\GRA\GRA\gra.cpp(49,25): error C2065: "endl": niezadeklarowany identyfikator
-C:\Nauka\GRA\GRA\GRA\gra.cpp(50,2): error C2065: "cout": niezadeklarowany identyfikator
-C:\Nauka\GRA\GRA\GRA\gra.cpp(50,30): error C2065: "endl": niezadeklarowany identyfikator
-C:\Nauka\GRA\GRA\GRA\gra.cpp(51,2): error C2065: "cout": niezadeklarowany identyfikator
-C:\Nauka\GRA\GRA\GRA\gra.cpp(51,30): error C2065: "endl": niezadeklarowany identyfikator
+C:\Nauka\GRA\GRA\GRA\gra.cpp(118,10): warning C4102: "deafault": etykieta, do której nie istnieje odwołanie
+  main.cpp
+  Generowanie kodu...
+  GRA.vcxproj -> C:\Nauka\GRA\GRA\Debug\GRA.exe
