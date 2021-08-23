@@ -1,15 +1,14 @@
-
-
 #include "gra.h"
-
-
-
 
 using namespace std;
 
+int running = 1;
+Heros* heros;
+
 int main()
 {
-	menu();
-
+	while (running)
+		menu();
+	delete heros;
 	return 0;
 }
