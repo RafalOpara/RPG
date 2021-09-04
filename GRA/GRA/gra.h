@@ -1,11 +1,18 @@
 #include <iostream>
 #include <string>
+#include <windows.h>
 
 using namespace std;
 
 void menu();
 void start();
-void interface();
+void staty();
+void powitanie();
+void poczatek();
+void sklep();
+void ekwipunek();
+
+
 
 //FUNCKJA WIRTUALNA DLA BOHETEROW GLOWNYCH
 class Heros
@@ -21,15 +28,32 @@ protected:
 	int damageMin;
 	int damageMax;
 	int defence;
+	string klasa;
+public:
+	int pieniadze;
+	string zbroja;
+	string bron;
+	
+
+
+
+	
 
 public:
-	explicit Heros(string = "n", int = 1, int = 1, int = 1, int = 1, int = 1, int = 1, int = 1, int = 1, int = 1);
+	explicit Heros(string = "n", int = 1, int = 1, int = 1, int = 1, int = 1, int = 1, int = 1,
+		int = 1, int = 1, string = "klasa", int=1,string="brak",string="brak");
 	virtual ~Heros();
 
-	virtual void attack() = 0; //czysta funkcja wirtualna
-	virtual void ucieczka() = 0;
-	virtual void powitanie() = 0;
-	friend void interface(const Heros* heros);
+	friend void powitanie(const Heros* heros);
+	friend void staty(const Heros* heros);
+	friend void sklep(const Heros* heros);
+	friend void ewkipunek(const Heros* heros);
+
+
+
+	
+
+	
 };
 //
 
@@ -38,12 +62,12 @@ class Wojownik :public Heros
 	int* wsk = nullptr;
 
 public:
-	Wojownik(string = "Wojownik", int = 1, int = 1, int = 1, int = 1, int = 1, int = 1, int = 1, int = 1, int = 1);
+	Wojownik(string = "Wojownik", int = 1, int = 1, int = 1, int = 1, int = 1, int = 1, int = 1,
+		int = 1, int = 1, string="Wojownik",int=1, string = "brak", string = "brak");
 	~Wojownik();
 
-	void attack();
-	void ucieczka();
-	void powitanie();
+	
+	
 
 
 
@@ -57,12 +81,11 @@ class Mag :public Heros
 {
 
 public:
-	Mag(string = "Mag", int = 1, int = 1, int = 1, int = 1, int = 1, int = 1, int = 1, int = 1, int = 1);
+	Mag(string = "Mag", int = 1, int = 1, int = 1, int = 1, int = 1, int = 1,
+		int = 1, int = 1, int = 1, string="Mag", int=1, string = "brak", string = "brak");
 	~Mag();
 
-	void attack();
-	void ucieczka();
-	void powitanie();
+
 
 
 };

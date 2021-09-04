@@ -1,16 +1,19 @@
 #include "gra.h"
 
 
+
 using namespace std;
 
 extern int running;
 extern Heros* heros;
 
+string imie;
+
 //POSTACIE 
 
 
-Heros::Heros(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def)
-	: name(n), level(lvl), exp(xp), expNext(xpn), hp(h), hpMax(hpm), energy(en), damageMin(dmgm), damageMax(dmgma), defence(def)
+Heros::Heros(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def,string k,int pi,string br,string zbr)
+	: name(n), level(lvl), exp(xp), expNext(xpn), hp(h), hpMax(hpm), energy(en), damageMin(dmgm), damageMax(dmgma), defence(def),klasa(k),pieniadze(pi),bron(br),zbroja(zbr)
 {
 }
 
@@ -27,8 +30,8 @@ Heros::~Heros()
 
 
 
-Wojownik::Wojownik(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def)
-	: Heros(n, lvl, xp, xpn, h, hpm, en, dmgm, dmgma, def)
+Wojownik::Wojownik(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def,string k,int pi, string br, string zbr)
+	: Heros(n, lvl, xp, xpn, h, hpm, en, dmgm, dmgma, def,k,pi,br,zbr)
 {
 	wsk = new int;
 }
@@ -42,26 +45,13 @@ Wojownik::~Wojownik()
 
 
 
-void Wojownik::attack()
-{
-	;
-}
 
 
-void Wojownik::ucieczka()
-{
-	;
-}
-
-void Wojownik::powitanie()
-{
-	cout << "Witaj jestem Wojownikiem " << endl;
-}
 
 ///////////////////////////////////
 
-Mag::Mag(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def)
-	: Heros(n, lvl, xp, xpn, h, hpm, en, dmgm, dmgma, def)
+Mag::Mag(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def, string k,int pi, string br, string zbr)
+	: Heros(n, lvl, xp, xpn, h, hpm, en, dmgm, dmgma, def,k,pi,br,zbr)
 {
 }
 
@@ -72,21 +62,9 @@ Mag::~Mag()
 
 
 
-void Mag::attack()
-{
-	;
-}
 
+////////////////
 
-void Mag::ucieczka()
-{
-	;
-}
-
-void Mag::powitanie()
-{
-	cout << "Witaj jestem magiem " << endl;
-}
 
 void menu()
 {
@@ -116,7 +94,7 @@ void menu()
 
 void start()
 {
-	string imie;
+	
 	int wybor_bohatera;
 
 	cout << "Witaj !!! Wybierz klase jaka chcesz grac" << endl;
@@ -132,17 +110,78 @@ void start()
 		cout << "Podaj imie dla swojego bohatera: " << endl;
 		cin >> imie;
 		heros = new Wojownik(imie);
+		powitanie(heros);
+		staty(heros);
+	
+
 	}
+
 
 	else if (wybor_bohatera == 2)
 	{
 		cout << "Podaj imie dla swojego bohatera: " << endl;
 		cin >> imie;
 		heros = new Mag(imie);
-	}
-	interface(heros);
+		powitanie(heros);
+		staty(heros);
+		
 
+		
+
+	}
+
+	int potwierdzenie;
+
+	cout << "Wybierz 1 aby zaczac przygode wybranym bohaterem" << endl;
+	cout << "Wybierz 2 aby wrocic do wyboru bohatera" << endl;
+
+	cin >> potwierdzenie;
+
+	if (potwierdzenie == 1)
+	{
+		poczatek();
+	}
+	else
+	{
+		start();
+
+	}
 }
 
+
+	
+
+
+void poczatek()
+
+{
+	heros;
+
+	cout << "Gra dla uzytkownika " << imie << " rozpocznie sie za:" << endl;
+
+	Sleep(1000);
+
+	system("cls");
+
+	Sleep(1000);
+
+	for (int i = 3; i > 0; i--)
+	{
+		cout << i << "." << endl;
+		Sleep(1000);
+		system("cls");
+
+
+
+
+
+		
+
+	}
+
+	sklep(heros);
+
+	ewkipunek(heros);
+}
 
 

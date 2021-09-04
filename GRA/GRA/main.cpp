@@ -11,4 +11,4 @@ int main()
 		menu();
 	delete heros;
 	return 0;
-}
+} 
