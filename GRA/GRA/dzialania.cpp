@@ -1,6 +1,6 @@
 #include "gra.h"
 
-void staty(const Heros* heros)
+void staty( Heros* heros)
 
 
 {
@@ -23,7 +23,7 @@ void powitanie(const Heros* heros)
 }
 
 
-void sklep(const Heros* heros)
+void sklep(Heros* heros)
 {
 	cout << "Witaj w naszym sklepie, oto nasze towary:" << endl;
 
@@ -31,7 +31,10 @@ void sklep(const Heros* heros)
 
 
 	cout << "1.STALKA +9 (+100hp)" << endl;
-	cout << "2.Miecz (+100dmg)" << endl;
+	cout << "2.Miecz (Maxdmg +100dmg/Mindmg 80)" << endl;
+	cout << "Opusc sklep" << endl;
+
+
 
 	int zakup;
 
@@ -42,24 +45,27 @@ void sklep(const Heros* heros)
 
 	if (zakup == 1)
 	{
-		
-		
+
+
 		heros->zbroja = "stalka";
-		
+		heros->defence = 100;
+
 	}
 
 	else if (zakup == 2)
 	{
-		
-		
+
+
 		heros->bron = "mieczor giganior";
-		
+		heros->damageMax = 100;
+		heros->damageMin = 80;
+
 	}
-	else if (zakup == 0)
+	else if (zakup == 3)
 	{
 		poczatek();
 	}
-	
+
 	else
 	{
 		cout << "Musisz wybrac cos ze sklepu !" << endl;
@@ -73,5 +79,6 @@ void ewkipunek(const Heros* heros)
 {
 	cout << heros->zbroja << endl;
 	cout << heros->bron << endl;
+	cout << heros->defence << endl;
 
 }

@@ -1,3 +1,4 @@
+
 #include "gra.h"
 
 
@@ -9,11 +10,13 @@ extern Heros* heros;
 
 string imie;
 
+
+
 //POSTACIE 
 
 
-Heros::Heros(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def,string k,int pi,string br,string zbr)
-	: name(n), level(lvl), exp(xp), expNext(xpn), hp(h), hpMax(hpm), energy(en), damageMin(dmgm), damageMax(dmgma), defence(def),klasa(k),pieniadze(pi),bron(br),zbroja(zbr)
+Heros::Heros(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def, string k, int pi, string br, string zbr)
+	: name(n), level(lvl), exp(xp), expNext(xpn), hp(h), hpMax(hpm), energy(en), damageMin(dmgm), damageMax(dmgma), defence(def), klasa(k), pieniadze(pi), bron(br), zbroja(zbr)
 {
 }
 
@@ -30,8 +33,8 @@ Heros::~Heros()
 
 
 
-Wojownik::Wojownik(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def,string k,int pi, string br, string zbr)
-	: Heros(n, lvl, xp, xpn, h, hpm, en, dmgm, dmgma, def,k,pi,br,zbr)
+Wojownik::Wojownik(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def, string k, int pi, string br, string zbr)
+	: Heros(n, lvl, xp, xpn, h, hpm, en, dmgm, dmgma, def, k, pi, br, zbr)
 {
 	wsk = new int;
 }
@@ -50,8 +53,8 @@ Wojownik::~Wojownik()
 
 ///////////////////////////////////
 
-Mag::Mag(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def, string k,int pi, string br, string zbr)
-	: Heros(n, lvl, xp, xpn, h, hpm, en, dmgm, dmgma, def,k,pi,br,zbr)
+Mag::Mag(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def, string k, int pi, string br, string zbr)
+	: Heros(n, lvl, xp, xpn, h, hpm, en, dmgm, dmgma, def, k, pi, br, zbr)
 {
 }
 
@@ -94,7 +97,7 @@ void menu()
 
 void start()
 {
-	
+
 	int wybor_bohatera;
 
 	cout << "Witaj !!! Wybierz klase jaka chcesz grac" << endl;
@@ -105,14 +108,18 @@ void start()
 	cout << "Wybor:";
 	cin >> wybor_bohatera;
 
+	
+
 	if (wybor_bohatera == 1)
+
+		
 	{
 		cout << "Podaj imie dla swojego bohatera: " << endl;
 		cin >> imie;
 		heros = new Wojownik(imie);
 		powitanie(heros);
 		staty(heros);
-	
+
 
 	}
 
@@ -124,9 +131,9 @@ void start()
 		heros = new Mag(imie);
 		powitanie(heros);
 		staty(heros);
-		
 
-		
+
+
 
 	}
 
@@ -149,7 +156,7 @@ void start()
 }
 
 
-	
+
 
 
 void poczatek()
@@ -175,13 +182,25 @@ void poczatek()
 
 
 
-		
+
 
 	}
 
-	sklep(heros);
 
-	ewkipunek(heros);
+
+	
+
+
+	rozgrywka(heros);
+	
 }
 
-
+void rozgrywka(Heros* heros)
+{
+	while (heros->hp > 0)
+	{
+		staty(heros);
+		miasto(heros);
+		
+	}
+}

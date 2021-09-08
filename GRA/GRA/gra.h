@@ -4,6 +4,8 @@
 
 using namespace std;
 
+
+
 void menu();
 void start();
 void staty();
@@ -11,6 +13,8 @@ void powitanie();
 void poczatek();
 void sklep();
 void ekwipunek();
+void rozgrywa();
+void miasto();
 
 
 
@@ -33,27 +37,28 @@ public:
 	int pieniadze;
 	string zbroja;
 	string bron;
-	
 
 
 
-	
+
+
 
 public:
 	explicit Heros(string = "n", int = 1, int = 1, int = 1, int = 1, int = 1, int = 1, int = 1,
-		int = 1, int = 1, string = "klasa", int=1,string="brak",string="brak");
+		int = 1, int = 1, string = "klasa", int = 1, string = "brak", string = "brak");
 	virtual ~Heros();
 
 	friend void powitanie(const Heros* heros);
-	friend void staty(const Heros* heros);
-	friend void sklep(const Heros* heros);
+	friend void staty( Heros* heros);
+	friend void sklep(Heros* heros);
 	friend void ewkipunek(const Heros* heros);
+	friend void rozgrywka(Heros* heros);
+	friend void miasto( Heros* heros);
 
 
 
-	
 
-	
+
 };
 //
 
@@ -63,11 +68,11 @@ class Wojownik :public Heros
 
 public:
 	Wojownik(string = "Wojownik", int = 1, int = 1, int = 1, int = 1, int = 1, int = 1, int = 1,
-		int = 1, int = 1, string="Wojownik",int=1, string = "brak", string = "brak");
+		int = 1, int = 1, string = "Wojownik", int = 1, string = "brak", string = "brak");
 	~Wojownik();
 
-	
-	
+
+
 
 
 
@@ -82,7 +87,7 @@ class Mag :public Heros
 
 public:
 	Mag(string = "Mag", int = 1, int = 1, int = 1, int = 1, int = 1, int = 1,
-		int = 1, int = 1, int = 1, string="Mag", int=1, string = "brak", string = "brak");
+		int = 1, int = 1, int = 1, string = "Mag", int = 1, string = "brak", string = "brak");
 	~Mag();
 
 
@@ -90,8 +95,3 @@ public:
 
 };
 //
-
-
-
-
-

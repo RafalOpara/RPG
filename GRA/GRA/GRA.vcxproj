@@ -142,6 +142,7 @@
     <ClCompile Include="dzialania.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="gra.cpp" />
+    <ClCompile Include="lokacje.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gra.h" />
