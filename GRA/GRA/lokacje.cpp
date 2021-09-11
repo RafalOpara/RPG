@@ -27,7 +27,7 @@ void miasto( Heros* heros)
 
 	else if (wybor == 3)
 	{
-		;
+		medyk(heros);
 	}
 
 	else
@@ -35,3 +35,4 @@ void miasto( Heros* heros)
 
 	}
 }
+

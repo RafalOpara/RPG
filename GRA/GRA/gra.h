@@ -15,6 +15,7 @@ void sklep();
 void ekwipunek();
 void rozgrywa();
 void miasto();
+void medyk();
 
 
 
@@ -54,6 +55,7 @@ public:
 	friend void ewkipunek(const Heros* heros);
 	friend void rozgrywka(Heros* heros);
 	friend void miasto( Heros* heros);
+	friend void medyk(Heros* heros);
 
 
 
@@ -68,7 +70,7 @@ class Wojownik :public Heros
 
 public:
 	Wojownik(string = "Wojownik", int = 1, int = 1, int = 1, int = 1, int = 1, int = 1, int = 1,
-		int = 1, int = 1, string = "Wojownik", int = 1, string = "brak", string = "brak");
+		int = 1, int = 1, string = "Wojownik", int = 1000, string = "brak", string = "brak");
 	~Wojownik();
 
 

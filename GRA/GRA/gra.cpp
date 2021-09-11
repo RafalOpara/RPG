@@ -190,7 +190,6 @@ void poczatek()
 
 	
 
-
 	rozgrywka(heros);
 	
 }
@@ -203,4 +202,7 @@ void rozgrywka(Heros* heros)
 		miasto(heros);
 		
 	}
-}
+	return ;
+}	
+
+

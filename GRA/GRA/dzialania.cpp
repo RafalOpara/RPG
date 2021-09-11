@@ -30,9 +30,9 @@ void sklep(Heros* heros)
 	cout << "pieniedze:" << heros->pieniadze << endl;
 
 
-	cout << "1.STALKA +9 (+100hp)" << endl;
-	cout << "2.Miecz (Maxdmg +100dmg/Mindmg 80)" << endl;
-	cout << "Opusc sklep" << endl;
+	cout << "1.STALKA +9 (+100hp)/100 monet" << endl;
+	cout << "2.Miecz (Maxdmg +100dmg/Mindmg 80)/100 monet" << endl;
+	cout << "3.Opusc sklep" << endl;
 
 
 
@@ -43,33 +43,41 @@ void sklep(Heros* heros)
 	cin >> zakup;
 
 
-	if (zakup == 1)
+	if (zakup == 1 && heros->pieniadze>100)
 	{
 
 
 		heros->zbroja = "stalka";
-		heros->defence = 100;
+		heros->defence = heros->defence+ 100;
+		heros->pieniadze=heros->pieniadze -100;
 
 	}
 
-	else if (zakup == 2)
+	else if (zakup == 2 && heros->pieniadze > 100)
 	{
 
 
 		heros->bron = "mieczor giganior";
-		heros->damageMax = 100;
-		heros->damageMin = 80;
+		heros->damageMax = heros->damageMax + 100;
+		heros->damageMin = heros->damageMin + 80;
+		heros->pieniadze = heros->pieniadze -100;
 
 	}
 	else if (zakup == 3)
 	{
-		poczatek();
+		void miasto();
 	}
 
-	else
+	else if (zakup != 1 && zakup != 2 && zakup != 3)
 	{
 		cout << "Musisz wybrac cos ze sklepu !" << endl;
-
+		sklep(heros);
+	}
+	
+	else
+	{
+		cout << "Masz za malo pieniedzy !" << endl;
+		sklep(heros);
 	}
 
 
@@ -82,3 +90,57 @@ void ewkipunek(const Heros* heros)
 	cout << heros->defence << endl;
 
 }
+
+void medyk(Heros* heros)
+{
+	cout << heros->hp << endl;
+
+	cout << "Wybierz co chcesz kupic" << endl;
+
+	cout << "1.Mala potka +20hp - 10 monet" << endl;
+	cout << "2.Srednia potka +40hp - 18 monet" << endl;
+	cout << "3.Duza potka +80hp - 35 monet" << endl;
+	cout << "4.Opusc medyka" << endl;
+
+
+	int zakup;
+
+	cin >> zakup;
+
+	if (zakup == 1 && heros->pieniadze>10)
+	{
+		heros->hp=heros->hp+20;
+		heros->pieniadze=heros->pieniadze -10;
+	}
+	else if(zakup == 2 && heros->pieniadze > 18)
+	{
+		heros->hp=heros->hp  +40;
+		heros->pieniadze=heros->pieniadze -18;
+	}
+	else if (zakup == 3 && heros->pieniadze > 35)
+	{
+		heros->hp = heros-> hp+80;
+		heros->pieniadze = heros->pieniadze -35;
+	}
+	else if (zakup == 4)
+	{
+		 miasto(heros);
+	}
+	else if(zakup !=1 && zakup!=2 && zakup!=3)
+	{
+		cout << "Musisz wybrac numer z podanej listy !" << endl;
+		medyk(heros);
+	}
+	else
+	{
+		cout << "Nie masz wystarczajacej liczby pieniedzy" << endl;
+		medyk(heros);
+
+	}
+
+
+
+
+
+}
+
