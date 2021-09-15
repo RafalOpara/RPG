@@ -6,7 +6,8 @@
 using namespace std;
 
 extern int running;
-extern Heros* heros;
+  Heros* heros;
+ 
 
 string imie;
 

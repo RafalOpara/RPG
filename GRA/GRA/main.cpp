@@ -4,6 +4,8 @@ using namespace std;
 
 int running = 1;
 Heros* heros;
+Enemys* enemy;
+
 
 int main()
 {

@@ -144,3 +144,53 @@ void medyk(Heros* heros)
 
 }
 
+void przygoda(Heros *heros)
+{
+	
+	cout << "Witaj, wybierz gdzie chcialbys sie udac: " << endl;
+	cout << "1:Wzgorze orkow " << endl;
+	cout << "2:Dolina smokow " << endl;
+	cout << "3:Kraina demonow " << endl;
+	cout << "4:Powrot do miasta " << endl;
+	
+
+	int wybor;
+
+	cin >> wybor;
+
+	if (wybor == 1)
+	{
+		wzgorze_orkow(heros);
+	}
+
+	else if (wybor == 2)
+	{
+		;//dolina_smokow(heros);
+	}
+
+
+	else if (wybor == 3)
+	{
+		;//kraina_demonow(heros);
+	}
+
+	else if (wybor == 4)
+	{
+		miasto(heros);
+	}
+
+	else 
+
+	{
+		cout << "Musisz wybrac jedna podanych opcji!" << endl;
+		przygoda(heros);
+	}
+
+
+}
+
+void walka(Heros*heros, Enemys*enemys)
+{
+	;
+}
+

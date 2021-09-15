@@ -1,4 +1,4 @@
-#include "gra.h"
+﻿#include "gra.h"
 
 
 void miasto( Heros* heros)
@@ -17,7 +17,7 @@ void miasto( Heros* heros)
 
 	if (wybor == 1)
 	{
-		;
+		przygoda(heros);
 	}
 
 	else if (wybor == 2)
@@ -36,3 +36,115 @@ void miasto( Heros* heros)
 	}
 }
 
+void wzgorze_orkow(Heros* heros, Enemys* enemys)
+{
+	cout << "Witaj, dotarles na wzgorze orkow" << endl;
+
+	cout << "Aby zmierzyc sie z krolem orkow musisz wygrac z jego slugami!!!" << endl;
+
+	cout << "Otwo twoj pierwszy przeciwnik:" << endl;
+
+
+	
+
+	cout << "Co chcesz zrobic: " << endl;
+	cout << "1.Walka " << endl;
+	cout << "2.Ucieczka" <<endl;
+
+	int wybor;
+	cin >> wybor;	
+
+	if (wybor = 1)
+	{
+		walka(heros, enemys);
+	}
+
+	else if (wybor = 2)
+	{
+		przygoda(heros);
+	}
+
+	else
+	{
+		cout << "Musisz wybrac jedna z powyzszych opcji" << endl;
+	}
+			
+}
+
+void dolina_smokow(Heros* heros, Enemys* enemys)
+{
+	cout << "Witaj, dotarles do doliny smokow" << endl;
+
+	cout << "Aby zmierzyc sie z krolem smokow musisz wygrac z jego slugami!!!" << endl;
+
+	cout << "Otwo twoj pierwszy przeciwnik:" << endl;
+
+
+	
+	
+
+	
+
+
+	cout << "Co chcesz zrobic: " << endl;
+	cout << "1.Walka " << endl;
+	cout << "2.Ucieczka" << endl;
+
+	int wybor;
+	cin >> wybor;
+
+	if (wybor = 1)
+	{
+		walka(heros, enemys);
+	}
+
+	else if (wybor = 2)
+	{
+		przygoda(heros);
+	}
+
+	else
+	{
+		cout << "Musisz wybrac jedna z powyzszych opcji" << endl;
+	}
+
+}
+
+
+void kraina_demonow(Heros* heros, Enemys* enemys)
+{
+	cout << "Witaj, dotarles do doliny smokow" << endl;
+
+	cout << "Aby zmierzyc sie z krolem smokow musisz wygrac z jego slugami!!!" << endl;
+
+	cout << "Otwo twoj pierwszy przeciwnik:" << endl;
+
+
+	
+
+	
+
+
+	cout << "Co chcesz zrobic: " << endl;
+	cout << "1.Walka " << endl;
+	cout << "2.Ucieczka" << endl;
+
+	int wybor;
+	cin >> wybor;
+
+	if (wybor = 1)
+	{
+		walka(heros, enemys);
+	}
+
+	else if (wybor = 2)
+	{
+		przygoda(heros);
+	}
+
+	else
+	{
+		cout << "Musisz wybrac jedna z powyzszych opcji" << endl;
+	}
+
+}

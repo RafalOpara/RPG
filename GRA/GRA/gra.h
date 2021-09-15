@@ -4,7 +4,7 @@
 
 using namespace std;
 
-
+class Enemys;
 
 void menu();
 void start();
@@ -16,7 +16,11 @@ void ekwipunek();
 void rozgrywa();
 void miasto();
 void medyk();
-
+void przygoda();
+void wzgorze_orkow();
+void dolina_smokow();
+void kraina_demonow();
+void walka();
 
 
 //FUNCKJA WIRTUALNA DLA BOHETEROW GLOWNYCH
@@ -56,6 +60,12 @@ public:
 	friend void rozgrywka(Heros* heros);
 	friend void miasto( Heros* heros);
 	friend void medyk(Heros* heros);
+	friend void przygoda(Heros* heros);
+	friend void wzgorze_orkow(Heros* heros);
+	friend void dolina_smokow(Heros* heros);
+	friend void kraina_demonow(Heros* heros);
+	friend void walka(Heros* heros, Enemys*enemys);
+	
 
 
 
@@ -97,3 +107,62 @@ public:
 
 };
 //
+
+
+//ENEMY
+
+
+class Enemys
+{
+protected:
+
+	string name;
+	int hp;
+	int hpMax;
+	int damage;
+
+
+public:
+	explicit Enemys(string = "Org", int = 1, int = 1, int = 1);
+	virtual ~Enemys();
+
+
+
+
+	friend void walka(Heros* heros, Enemys* enemys);
+
+
+
+};
+
+class Ogr:public Enemys
+{
+
+
+public:
+	
+	Ogr(string = "Org", int = 1, int = 1, int = 1);
+	~Ogr();
+};
+
+
+class Smok :public Enemys
+{
+protected:
+
+
+public:
+
+	Smok(string = "Smok", int = 1, int = 1, int = 1);
+	~Smok();
+};
+
+class Demon :public Enemys
+{
+
+
+
+public:
+	Demon(string = "Demon", int = 1, int = 1, int = 1);
+	~Demon();
+};
