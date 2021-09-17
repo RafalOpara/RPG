@@ -1,6 +1,6 @@
 #include "gra.h"
 
-void staty( Heros* heros)
+void staty(Heros* heros, Enemys* enemys)
 
 
 {
@@ -43,13 +43,13 @@ void sklep(Heros* heros)
 	cin >> zakup;
 
 
-	if (zakup == 1 && heros->pieniadze>100)
+	if (zakup == 1 && heros->pieniadze > 100)
 	{
 
 
 		heros->zbroja = "stalka";
-		heros->defence = heros->defence+ 100;
-		heros->pieniadze=heros->pieniadze -100;
+		heros->defence = heros->defence + 100;
+		heros->pieniadze = heros->pieniadze - 100;
 
 	}
 
@@ -60,7 +60,7 @@ void sklep(Heros* heros)
 		heros->bron = "mieczor giganior";
 		heros->damageMax = heros->damageMax + 100;
 		heros->damageMin = heros->damageMin + 80;
-		heros->pieniadze = heros->pieniadze -100;
+		heros->pieniadze = heros->pieniadze - 100;
 
 	}
 	else if (zakup == 3)
@@ -73,7 +73,7 @@ void sklep(Heros* heros)
 		cout << "Musisz wybrac cos ze sklepu !" << endl;
 		sklep(heros);
 	}
-	
+
 	else
 	{
 		cout << "Masz za malo pieniedzy !" << endl;
@@ -91,7 +91,7 @@ void ewkipunek(const Heros* heros)
 
 }
 
-void medyk(Heros* heros)
+void medyk(Heros* heros, Enemys* enemys)
 {
 	cout << heros->hp << endl;
 
@@ -107,34 +107,34 @@ void medyk(Heros* heros)
 
 	cin >> zakup;
 
-	if (zakup == 1 && heros->pieniadze>10)
+	if (zakup == 1 && heros->pieniadze > 10)
 	{
-		heros->hp=heros->hp+20;
-		heros->pieniadze=heros->pieniadze -10;
+		heros->hp = heros->hp + 20;
+		heros->pieniadze = heros->pieniadze - 10;
 	}
-	else if(zakup == 2 && heros->pieniadze > 18)
+	else if (zakup == 2 && heros->pieniadze > 18)
 	{
-		heros->hp=heros->hp  +40;
-		heros->pieniadze=heros->pieniadze -18;
+		heros->hp = heros->hp + 40;
+		heros->pieniadze = heros->pieniadze - 18;
 	}
 	else if (zakup == 3 && heros->pieniadze > 35)
 	{
-		heros->hp = heros-> hp+80;
-		heros->pieniadze = heros->pieniadze -35;
+		heros->hp = heros->hp + 80;
+		heros->pieniadze = heros->pieniadze - 35;
 	}
 	else if (zakup == 4)
 	{
-		 miasto(heros);
+		miasto(heros, enemys);
 	}
-	else if(zakup !=1 && zakup!=2 && zakup!=3)
+	else if (zakup != 1 && zakup != 2 && zakup != 3)
 	{
 		cout << "Musisz wybrac numer z podanej listy !" << endl;
-		medyk(heros);
+		medyk(heros, enemys);
 	}
 	else
 	{
 		cout << "Nie masz wystarczajacej liczby pieniedzy" << endl;
-		medyk(heros);
+		medyk(heros, enemys);
 
 	}
 
@@ -144,15 +144,15 @@ void medyk(Heros* heros)
 
 }
 
-void przygoda(Heros *heros)
+void przygoda(Heros* heros, Enemys* enemys)
 {
-	
+
 	cout << "Witaj, wybierz gdzie chcialbys sie udac: " << endl;
 	cout << "1:Wzgorze orkow " << endl;
 	cout << "2:Dolina smokow " << endl;
 	cout << "3:Kraina demonow " << endl;
 	cout << "4:Powrot do miasta " << endl;
-	
+
 
 	int wybor;
 
@@ -160,7 +160,7 @@ void przygoda(Heros *heros)
 
 	if (wybor == 1)
 	{
-		wzgorze_orkow(heros);
+		wzgorze_orkow(heros, enemys);
 	}
 
 	else if (wybor == 2)
@@ -176,21 +176,21 @@ void przygoda(Heros *heros)
 
 	else if (wybor == 4)
 	{
-		miasto(heros);
+		miasto(heros, enemys);
 	}
 
-	else 
+	else
 
 	{
 		cout << "Musisz wybrac jedna podanych opcji!" << endl;
-		przygoda(heros);
+		przygoda(heros, enemys);
 	}
 
 
 }
 
-void walka(Heros*heros, Enemys*enemys)
+void walka(Heros* heros, Enemys* enemys)
 {
-	;
+	cout << "Dupa" << endl;
 }
 

@@ -1,11 +1,11 @@
 #include "gra.h"
 
- Enemys* enemys;
+Enemys* enemys;
 
 Enemys::Enemys(string n, int h, int hm, int dmg)
 	: name(n), hp(h), hpMax(hm), damage(dmg)
 {
-}	
+}
 
 Enemys::~Enemys()
 {
@@ -14,7 +14,7 @@ Enemys::~Enemys()
 
 
 Ogr::Ogr(string n, int h, int hm, int dmg)
-	:Enemys (n,h,hm,dmg)
+	:Enemys(n, h, hm, dmg)
 {
 }
 

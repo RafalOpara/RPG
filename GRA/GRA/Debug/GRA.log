@@ -1,6 +1,7 @@
-﻿  lokacje.cpp
-gra.obj : error LNK2005: Element "class Heros * heros" (?heros@@3PAVHeros@@A) jest już zdefiniowany w elemencie main.obj
-dzialania.obj : error LNK2019: nierozpoznany symbol zewnętrzny "void __cdecl wzgorze_orkow(class Heros *)" (?wzgorze_orkow@@YAXPAVHeros@@@Z) przywołany w funkcji "void __cdecl przygoda(class Heros *)" (?przygoda@@YAXPAVHeros@@@Z)
-    Wskazówki dla symboli, które są zdefiniowane i mogą potencjalnie pasować:
-      "void __cdecl wzgorze_orkow(class Heros *,class Enemys *)" (?wzgorze_orkow@@YAXPAVHeros@@PAVEnemys@@@Z)
-C:\Nauka\GRA\GRA\Debug\GRA.exe : fatal error LNK1120: liczba nierozpoznanych elementów zewnętrznych: 1
+﻿  dzialania.cpp
+  main.cpp
+  gra.cpp
+  lokacje.cpp
+  enemy.cpp
+  Generowanie kodu...
+  GRA.vcxproj -> C:\Nauka\GRA\GRA\Debug\GRA.exe

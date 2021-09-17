@@ -6,15 +6,11 @@
 using namespace std;
 
 extern int running;
-  Heros* heros;
- 
+extern Heros* heros;
+extern Heros* heros;
+extern Enemys* enemys;
 
 string imie;
-
-
-
-//POSTACIE 
-
 
 Heros::Heros(string n, int lvl, int xp, int xpn, int h, int hpm, int en, int dmgm, int dmgma, int def, string k, int pi, string br, string zbr)
 	: name(n), level(lvl), exp(xp), expNext(xpn), hp(h), hpMax(hpm), energy(en), damageMin(dmgm), damageMax(dmgma), defence(def), klasa(k), pieniadze(pi), bron(br), zbroja(zbr)
@@ -109,17 +105,17 @@ void start()
 	cout << "Wybor:";
 	cin >> wybor_bohatera;
 
-	
+
 
 	if (wybor_bohatera == 1)
 
-		
+
 	{
 		cout << "Podaj imie dla swojego bohatera: " << endl;
 		cin >> imie;
 		heros = new Wojownik(imie);
 		powitanie(heros);
-		staty(heros);
+		staty(heros, enemys);
 
 
 	}
@@ -131,7 +127,7 @@ void start()
 		cin >> imie;
 		heros = new Mag(imie);
 		powitanie(heros);
-		staty(heros);
+		staty(heros, enemys);
 
 
 
@@ -189,21 +185,21 @@ void poczatek()
 
 
 
-	
+
 
 	rozgrywka(heros);
-	
+
 }
 
 void rozgrywka(Heros* heros)
 {
 	while (heros->hp > 0)
 	{
-		staty(heros);
-		miasto(heros);
-		
+		staty(heros, enemys);
+		miasto(heros, enemys);
+
 	}
-	return ;
-}	
+	return;
+}
 
 

@@ -1,7 +1,7 @@
 ﻿#include "gra.h"
 
 
-void miasto( Heros* heros)
+void miasto(Heros* heros, Enemys* enemys)
 {
 	cout << "Witaj, gre rozpoczynasz w miescie" << endl;
 	cout << "Wybierz co chcesz zrobic" << endl;
@@ -17,7 +17,7 @@ void miasto( Heros* heros)
 
 	if (wybor == 1)
 	{
-		przygoda(heros);
+		przygoda(heros, enemys);
 	}
 
 	else if (wybor == 2)
@@ -27,7 +27,7 @@ void miasto( Heros* heros)
 
 	else if (wybor == 3)
 	{
-		medyk(heros);
+		medyk(heros, enemys);
 	}
 
 	else
@@ -45,45 +45,6 @@ void wzgorze_orkow(Heros* heros, Enemys* enemys)
 	cout << "Otwo twoj pierwszy przeciwnik:" << endl;
 
 
-	
-
-	cout << "Co chcesz zrobic: " << endl;
-	cout << "1.Walka " << endl;
-	cout << "2.Ucieczka" <<endl;
-
-	int wybor;
-	cin >> wybor;	
-
-	if (wybor = 1)
-	{
-		walka(heros, enemys);
-	}
-
-	else if (wybor = 2)
-	{
-		przygoda(heros);
-	}
-
-	else
-	{
-		cout << "Musisz wybrac jedna z powyzszych opcji" << endl;
-	}
-			
-}
-
-void dolina_smokow(Heros* heros, Enemys* enemys)
-{
-	cout << "Witaj, dotarles do doliny smokow" << endl;
-
-	cout << "Aby zmierzyc sie z krolem smokow musisz wygrac z jego slugami!!!" << endl;
-
-	cout << "Otwo twoj pierwszy przeciwnik:" << endl;
-
-
-	
-	
-
-	
 
 
 	cout << "Co chcesz zrobic: " << endl;
@@ -95,12 +56,53 @@ void dolina_smokow(Heros* heros, Enemys* enemys)
 
 	if (wybor = 1)
 	{
+		enemys = new Ogr();
 		walka(heros, enemys);
 	}
 
 	else if (wybor = 2)
 	{
-		przygoda(heros);
+		przygoda(heros, enemys);
+	}
+
+	else
+	{
+		cout << "Musisz wybrac jedna z powyzszych opcji" << endl;
+	}
+
+}
+
+void dolina_smokow(Heros* heros, Enemys* enemys)
+{
+	cout << "Witaj, dotarles do doliny smokow" << endl;
+
+	cout << "Aby zmierzyc sie z krolem smokow musisz wygrac z jego slugami!!!" << endl;
+
+	cout << "Otwo twoj pierwszy przeciwnik:" << endl;
+
+
+
+
+
+
+
+
+	cout << "Co chcesz zrobic: " << endl;
+	cout << "1.Walka " << endl;
+	cout << "2.Ucieczka" << endl;
+
+	int wybor;
+	cin >> wybor;
+
+	if (wybor = 1)
+	{
+		enemys = new Smok();
+		walka(heros, enemys);
+	}
+
+	else if (wybor = 2)
+	{
+		przygoda(heros, enemys);
 	}
 
 	else
@@ -120,9 +122,9 @@ void kraina_demonow(Heros* heros, Enemys* enemys)
 	cout << "Otwo twoj pierwszy przeciwnik:" << endl;
 
 
-	
 
-	
+
+
 
 
 	cout << "Co chcesz zrobic: " << endl;
@@ -134,12 +136,13 @@ void kraina_demonow(Heros* heros, Enemys* enemys)
 
 	if (wybor = 1)
 	{
+		enemys = new Demon();
 		walka(heros, enemys);
 	}
 
 	else if (wybor = 2)
 	{
-		przygoda(heros);
+		przygoda(heros, enemys);
 	}
 
 	else

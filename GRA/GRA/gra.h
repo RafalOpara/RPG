@@ -5,22 +5,24 @@
 using namespace std;
 
 class Enemys;
+class Heros;
+
 
 void menu();
 void start();
-void staty();
+void staty(Heros* heros, Enemys* enemys);
 void powitanie();
 void poczatek();
 void sklep();
 void ekwipunek();
 void rozgrywa();
-void miasto();
-void medyk();
-void przygoda();
-void wzgorze_orkow();
-void dolina_smokow();
-void kraina_demonow();
-void walka();
+void miasto(Heros* heros, Enemys* enemys);
+void medyk(Heros* heros, Enemys* enemys);
+void przygoda(Heros* heros, Enemys* enemys);
+void wzgorze_orkow(Heros* heros, Enemys* enemys);
+void dolina_smokow(Heros* heros, Enemys* enemys);
+void kraina_demonow(Heros* heros, Enemys* enemys);
+//void walka(Heros* heros, Enemys* enemys);
 
 
 //FUNCKJA WIRTUALNA DLA BOHETEROW GLOWNYCH
@@ -54,18 +56,18 @@ public:
 	virtual ~Heros();
 
 	friend void powitanie(const Heros* heros);
-	friend void staty( Heros* heros);
+	friend void staty(Heros* heros, Enemys* enemys);
 	friend void sklep(Heros* heros);
 	friend void ewkipunek(const Heros* heros);
 	friend void rozgrywka(Heros* heros);
-	friend void miasto( Heros* heros);
-	friend void medyk(Heros* heros);
-	friend void przygoda(Heros* heros);
-	friend void wzgorze_orkow(Heros* heros);
-	friend void dolina_smokow(Heros* heros);
-	friend void kraina_demonow(Heros* heros);
-	friend void walka(Heros* heros, Enemys*enemys);
-	
+	friend void miasto(Heros* heros, Enemys* enemys);
+	friend void medyk(Heros* heros, Enemys* enemys);
+	friend void przygoda(Heros* heros, Enemys* enemys);
+	friend void wzgorze_orkow(Heros* heros, Enemys* enemys);
+	friend void dolina_smokow(Heros* heros, Enemys* enemys);
+	friend void kraina_demonow(Heros* heros, Enemys* enemys);
+	friend void walka(Heros* heros, Enemys* enemys);
+
 
 
 
@@ -130,17 +132,21 @@ public:
 
 
 	friend void walka(Heros* heros, Enemys* enemys);
-
-
-
+	friend void wzgorze_orkow(Heros* heros, Enemys* enemys);
+	friend void dolina_smokow(Heros* heros, Enemys* enemys);
+	friend void kraina_demonow(Heros* heros, Enemys* enemys);
+	friend void przygoda(Heros* heros, Enemys* enemys);
+	friend void miasto(Heros* heros, Enemys* enemys);
+	friend void medyk(Heros* heros, Enemys* enemys);
+	friend void staty(Heros* heros, Enemys* enemys);
 };
 
-class Ogr:public Enemys
+class Ogr :public Enemys
 {
 
 
 public:
-	
+
 	Ogr(string = "Org", int = 1, int = 1, int = 1);
 	~Ogr();
 };
