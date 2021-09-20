@@ -32,7 +32,7 @@ void miasto(Heros* heros, Enemys* enemys)
 
 	else
 	{
-
+		;
 	}
 }
 
@@ -44,7 +44,8 @@ void wzgorze_orkow(Heros* heros, Enemys* enemys)
 
 	cout << "Otwo twoj pierwszy przeciwnik:" << endl;
 
-
+	enemys = new Ogr();
+	staty_enemys(heros, enemys);
 
 
 	cout << "Co chcesz zrobic: " << endl;
@@ -54,13 +55,13 @@ void wzgorze_orkow(Heros* heros, Enemys* enemys)
 	int wybor;
 	cin >> wybor;
 
-	if (wybor = 1)
+	if (wybor == 1)
 	{
-		enemys = new Ogr();
+		
 		walka(heros, enemys);
 	}
 
-	else if (wybor = 2)
+	else if (wybor == 2)
 	{
 		przygoda(heros, enemys);
 	}
@@ -94,13 +95,13 @@ void dolina_smokow(Heros* heros, Enemys* enemys)
 	int wybor;
 	cin >> wybor;
 
-	if (wybor = 1)
+	if (wybor ==1)
 	{
 		enemys = new Smok();
 		walka(heros, enemys);
 	}
 
-	else if (wybor = 2)
+	else if (wybor == 2)
 	{
 		przygoda(heros, enemys);
 	}
@@ -134,13 +135,13 @@ void kraina_demonow(Heros* heros, Enemys* enemys)
 	int wybor;
 	cin >> wybor;
 
-	if (wybor = 1)
+	if (wybor == 1)
 	{
 		enemys = new Demon();
 		walka(heros, enemys);
 	}
 
-	else if (wybor = 2)
+	else if (wybor == 2)
 	{
 		przygoda(heros, enemys);
 	}

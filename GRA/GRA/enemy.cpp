@@ -49,5 +49,5 @@ Demon::Demon(string n, int h, int hm, int dmg)
 
 Demon::~Demon()
 {
-
+	
 }

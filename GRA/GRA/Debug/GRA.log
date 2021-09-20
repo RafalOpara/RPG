@@ -1,7 +1,8 @@
 ﻿  dzialania.cpp
-  main.cpp
+C:\Nauka\GRA\GRA\GRA\dzialania.cpp(271,13): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  enemy.cpp
   gra.cpp
   lokacje.cpp
-  enemy.cpp
+  main.cpp
   Generowanie kodu...
   GRA.vcxproj -> C:\Nauka\GRA\GRA\Debug\GRA.exe
