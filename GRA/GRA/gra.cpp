@@ -3,6 +3,7 @@
 
 
 
+
 using namespace std;
 
 extern int running;
@@ -199,6 +200,7 @@ void rozgrywka(Heros* heros)
 		miasto(heros, enemys);
 
 	}
+	cout << "Przegrales!" << endl;
 	return;
 }
 

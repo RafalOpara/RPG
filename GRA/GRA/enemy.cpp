@@ -2,6 +2,7 @@
 
 Enemys* enemys;
 
+
 Enemys::Enemys(string n, int h, int hm, int dmg)
 	: name(n), hp(h), hpMax(hm), damage(dmg)
 {

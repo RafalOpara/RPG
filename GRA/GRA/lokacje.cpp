@@ -1,6 +1,7 @@
 ﻿#include "gra.h"
 
 
+
 void miasto(Heros* heros, Enemys* enemys)
 {
 	cout << "Witaj, gre rozpoczynasz w miescie" << endl;
@@ -38,26 +39,71 @@ void miasto(Heros* heros, Enemys* enemys)
 
 void wzgorze_orkow(Heros* heros, Enemys* enemys)
 {
-	cout << "Witaj, dotarles na wzgorze orkow" << endl;
 
-	cout << "Aby zmierzyc sie z krolem orkow musisz wygrac z jego slugami!!!" << endl;
+	int poziom_ork = 1;
 
-	cout << "Otwo twoj pierwszy przeciwnik:" << endl;
+	if (poziom_ork==1)
+	{
+		cout << "Witaj, dotarles na wzgorze orkow" << endl;
 
-	enemys = new Ogr();
-	staty_enemys(heros, enemys);
+		cout << "Aby zmierzyc sie z krolem orkow musisz wygrac z jego slugami!!!" << endl;
 
+		cout << "Otwo twoj pierwszy przeciwnik:" << endl;
 
+		enemys = new Ogr("Pierwszy sluga",50,50,10);
+		staty_enemys(heros, enemys);
+		walka(heros, enemys);
+		if (wynik == 1)
+		{
+			poziom_ork++;
+		}
+
+		miasto(heros, enemys);
+	}
+	else if (poziom_ork==2)
+	{
+		cout << "WZGORZE ORKOW" << endl;
+		cout << "OTO TWOJ KOLEJNY PRZECIWNIK" << endl;
+
+		enemys = new Ogr("Drugi sluga", 100, 100, 20);
+		staty_enemys(heros, enemys);
+		walka(heros, enemys);
+		if (wynik == 1)
+		{
+			poziom_ork++;
+		}
+		
+		miasto(heros, enemys);
+	}
+	else if (poziom_ork==3)
+	{
+		cout << "WZGORZE ORKOW" << endl;
+		cout << "OTO TWOJ KOLEJNY PRZECIWNIK" << endl;
+
+		enemys = new Ogr("Trzeci sluga", 200, 200, 30);
+		staty_enemys(heros, enemys);
+		walka(heros, enemys);
+		if (wynik == 1)
+		{
+			poziom_ork++;
+		}
+		miasto(heros, enemys);
+	}
+	else
+	{
+		cout << "Pokonales juz  wszystkich Orkow!" << endl;
+		cout << "Udaj sie w inne miejsce aby pokonac kolejnych wrogow" << endl;
+		miasto(heros, enemys);
+	}
 	cout << "Co chcesz zrobic: " << endl;
 	cout << "1.Walka " << endl;
 	cout << "2.Ucieczka" << endl;
-
+	
 	int wybor;
 	cin >> wybor;
 
 	if (wybor == 1)
 	{
-		
 		walka(heros, enemys);
 	}
 
@@ -79,7 +125,7 @@ void dolina_smokow(Heros* heros, Enemys* enemys)
 
 	cout << "Aby zmierzyc sie z krolem smokow musisz wygrac z jego slugami!!!" << endl;
 
-	cout << "Otwo twoj pierwszy przeciwnik:" << endl;
+	cout << "Otwo twoj przeciwnik:" << endl;
 
 
 
@@ -120,7 +166,7 @@ void kraina_demonow(Heros* heros, Enemys* enemys)
 
 	cout << "Aby zmierzyc sie z krolem smokow musisz wygrac z jego slugami!!!" << endl;
 
-	cout << "Otwo twoj pierwszy przeciwnik:" << endl;
+	cout << "Otwo twoj przeciwnik:" << endl;
 
 
 

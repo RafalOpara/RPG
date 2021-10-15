@@ -2,6 +2,7 @@
 
 using namespace std;
 
+
 int running = 1;
 Heros* heros;
 Enemys* enemy;
@@ -9,6 +10,7 @@ Enemys* enemy;
 
 int main()
 {
+
 	while (running)
 		menu();
 	delete heros;

@@ -6,8 +6,12 @@
 
 using namespace std;
 
+int wynik = 0;
+
 class Enemys;
 class Heros;
+
+
 
 
 void staty_enemys(Heros* heros, Enemys* enemys);
@@ -27,8 +31,8 @@ void dolina_smokow(Heros* heros, Enemys* enemys);
 void kraina_demonow(Heros* heros, Enemys* enemys);
 void tura_herosa(Heros* heros, Enemys* enemys);
 void lvl_up(Heros* heros, Enemys* enemys);
+void walka(Heros* heros, Enemys* enemys);
 
-//void walka(Heros* heros, Enemys* enemys);
 
 
 //FUNCKJA WIRTUALNA DLA BOHETEROW GLOWNYCH
@@ -150,6 +154,8 @@ public:
 	friend void tura_herosa(Heros* heros, Enemys* enemys);
 	friend void staty_enemys(Heros* heros, Enemys* enemys);
 	friend void lvl_up(Heros* heros, Enemys* enemys);
+
+	
 };
 
 class Ogr :public Enemys

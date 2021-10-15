@@ -1,8 +1,7 @@
 ﻿  dzialania.cpp
-C:\Nauka\GRA\GRA\GRA\dzialania.cpp(271,13): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
-  enemy.cpp
-  gra.cpp
-  lokacje.cpp
-  main.cpp
-  Generowanie kodu...
-  GRA.vcxproj -> C:\Nauka\GRA\GRA\Debug\GRA.exe
+C:\Nauka\GRA\GRA\GRA\dzialania.cpp(304,13): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+main.obj : error LNK2005: Element "int wynik" (?wynik@@3HA) jest już zdefiniowany w elemencie dzialania.obj
+gra.obj : error LNK2005: Element "int wynik" (?wynik@@3HA) jest już zdefiniowany w elemencie dzialania.obj
+lokacje.obj : error LNK2005: Element "int wynik" (?wynik@@3HA) jest już zdefiniowany w elemencie dzialania.obj
+enemy.obj : error LNK2005: Element "int wynik" (?wynik@@3HA) jest już zdefiniowany w elemencie dzialania.obj
+C:\Nauka\GRA\GRA\Debug\GRA.exe : fatal error LNK1169: znaleziono co najmniej jeden wielokrotnie zdefiniowany symbol
