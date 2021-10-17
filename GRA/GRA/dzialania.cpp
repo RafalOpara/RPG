@@ -2,6 +2,8 @@
 
 extern int wynik;
 
+
+
 void staty(Heros* heros, Enemys* enemys)
 
 
@@ -174,13 +176,13 @@ void przygoda(Heros* heros, Enemys* enemys)
 
 	else if (wybor == 2)
 	{
-		;//dolina_smokow(heros);
+		dolina_smokow(heros, enemys);
 	}
 
 
 	else if (wybor == 3)
 	{
-		;//kraina_demonow(heros);
+		kraina_demonow(heros, enemys);
 	}
 
 	else if (wybor == 4)
@@ -210,76 +212,120 @@ void walka(Heros* heros, Enemys* enemys)
 
 	if (wybor == 1)
 	{
-		while (heros->hp > 0 || enemys->hp > 0)
-		{
-
-			int i = 0;
-			i++;
-			cout << "Runda:" << i << endl;
-			cout << "Enemy wyprowadza cios" << endl;
-			heros->hp = heros->hp - enemys->damage;
-			cout << "STATY GRACZA:" << endl;
-			staty(heros, enemys);
-			cout << "STATY ENEMY:" << endl;
-			staty_enemys(heros, enemys);
-
-
-
-
-			cout << "Twoj ruch!:" << endl;
-			cout << "1.Zaatakuj " << endl;
-			cout << "2.Uzyj umiejetnosci specjalnej" << endl;
-			cout << "3.Uzyj potki" << endl;
-			staty_enemys(heros, enemys);
-			tura_herosa(heros, enemys);
-			if (enemys->hp <= 0)
+			while (heros->hp > 0 || enemys->hp > 0)
 			{
-				break;
+
+				int i = 0;
+				i++;
+				cout << "Runda:" << i << endl;
+				cout << "Enemy wyprowadza cios" << endl;
+				heros->hp = heros->hp - enemys->damage;
+
+				cout << endl;
+				cout << endl;
+				cout << endl;
+
+
+				cout << "STATY GRACZA:" << endl;
+				staty(heros, enemys);
+
+				cout << endl;
+				cout << endl;
+				cout << endl;
+
+				cout << "STATY ENEMY:" << endl;
+				staty_enemys(heros, enemys);
+
+				cout << endl;
+				cout << endl;
+				cout << endl;
+
+
+			
+
+			
+
+				
+				if (enemys->hp <= 0 || heros->hp<=0)
+				{
+					break;
+				}
+				cout << endl;
+				cout << endl;
+				cout << endl;
+
+				
+				
+				tura_herosa(heros, enemys);
+				
+
 			}
 
-		}
+							if (heros->hp <= 0)
+							{
 
-		if (heros->hp <= 0)
-		{
-			cout << "POLEGLES!" << endl;
-			cout << "Koniec gry!" << endl;
+								
+
+								cout << endl;
+								cout << endl;
+								cout << endl;
+
+								cout << "POLEGLES!" << endl;
+								cout << "Koniec gry!" << endl;
 			
-			start();
+								start();
 
 
-		}
-		else if (enemys->hp <= 0)
-		{
+							}
+							else if (enemys->hp <= 0)
+							{
+								cout << endl;
+								cout << endl;
+								cout << endl;
 
-			cout << "GRATULACJE!, POKONALLES SWOJEGO PRZECIWNIKA!" << endl;
-			cout << " Otrzymujesz zloto oraz pnkt doswiadczenia " << endl;
-			cout << " zloto +20 " << endl;
-			cout << " exp +20 " << endl;
-			heros->pieniadze = heros->pieniadze + 20;
-			heros->exp = heros->exp + 110;
+								staty(heros, enemys);
+
+								cout << endl;
+								cout << endl;
+								cout << endl;
+
+								staty_enemys(heros, enemys);
+
+								cout << endl;
+								cout << endl;
+								cout << endl;
+
+								cout << "GRATULACJE!, POKONALLES SWOJEGO PRZECIWNIKA!" << endl;
+								cout << " Otrzymujesz zloto oraz pnkt doswiadczenia " << endl;
+								cout << " zloto +20 " << endl;
+								cout << " exp +20 " << endl;
+								heros->pieniadze = heros->pieniadze + 20;
+								heros->exp = heros->exp + 110;
 
 
-			wynik = 1;
+								wynik = 1;
 
 
-			lvl_up(heros, enemys);
+								lvl_up(heros, enemys);
 
 			
+								cout << endl;
+								cout << endl;
+								cout << endl;
 
 
-
+							}
+	}
+		else if (wybor == 2)
+		{
+			przygoda(heros, enemys);
 		}
-	}
-	else if (wybor == 2)
-	{
-		przygoda(heros, enemys);
-	}
 
-	else
-	{
-		cout << "Musisz wybrac jedna z powyzszych opcji" << endl;
-		walka(heros, enemys);
-	}
+		else
+		{
+			cout << "Musisz wybrac jedna z powyzszych opcji" << endl;
+			walka(heros, enemys);
+		}
 
 	
 }
@@ -296,6 +342,11 @@ void walka(Heros* heros, Enemys* enemys)
 
 void tura_herosa(Heros* heros, Enemys* enemys)
 {	
+	cout << "Twoj ruch!:" << endl;
+	cout << "1.Zaatakuj " << endl;
+	cout << "2.Uzyj umiejetnosci specjalnej" << endl;
+	cout << "3.Uzyj potki" << endl;
+
 	int wybor;
 	cin >> wybor;
 
@@ -306,7 +357,7 @@ void tura_herosa(Heros* heros, Enemys* enemys)
 	}
 	else if (wybor == 2)
 	{
-		;
+		heros->umiejetnosc_specjalna(heros,enemys);
 	}
 	else if (wybor == 3)
 	{

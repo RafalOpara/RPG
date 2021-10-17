@@ -144,6 +144,7 @@
     <ClCompile Include="gra.cpp" />
     <ClCompile Include="lokacje.cpp" />
     <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="zmienne_Globalne.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gra.h" />

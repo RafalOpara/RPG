@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int wynik = 0;
+
 
 class Enemys;
 class Heros;
@@ -32,6 +32,7 @@ void kraina_demonow(Heros* heros, Enemys* enemys);
 void tura_herosa(Heros* heros, Enemys* enemys);
 void lvl_up(Heros* heros, Enemys* enemys);
 void walka(Heros* heros, Enemys* enemys);
+
 
 
 
@@ -65,6 +66,8 @@ public:
 		int = 1, int = 1, string = "klasa", int = 1, string = "brak", string = "brak");
 	virtual ~Heros();
 
+	virtual void umiejetnosc_specjalna(Heros* heros, Enemys* enemys) = 0;
+
 	friend void staty_enemys(Heros* heros, Enemys* enemys);
 	friend void powitanie(const Heros* heros);
 	friend void staty(Heros* heros, Enemys* enemys);
@@ -80,7 +83,7 @@ public:
 	friend void walka(Heros* heros, Enemys* enemys);
 	friend void tura_herosa(Heros* heros, Enemys* enemys);
 	friend void lvl_up(Heros* heros, Enemys* enemys);
-
+	
 
 
 
@@ -97,6 +100,38 @@ public:
 		int = 11, int = 30, string = "Wojownik", int = 1000, string = "brak", string = "brak");
 	~Wojownik();
 
+
+
+	virtual void umiejetnosc_specjalna(Heros* heros, Enemys* enemys)
+	{
+		cout << "Opis umiejetnosci:" << endl;
+		cout << "Bohater traci 10pnkt zycia lecz wyprowadza atak 2 razy" << endl;
+		cout << "Specjalnej umiejetnosci w pojedynku mozna uzyc tylko raz!!!" << endl;
+		cout << endl;
+		cout << endl;
+		cout << "Czy chcesz uzyt umiejetnosci" << endl;
+		cout << endl;
+		cout << "1.TAK / 2.NIE" << endl;
+		int wybor;
+		cin >> wybor;
+		if (wybor == 1)
+		{
+			heros->hp = heros->hp - 10;
+			srand(time(NULL));
+			enemys->hp = enemys->hp - ((rand() % heros->damageMin) + heros->damageMax);
+
+			srand(time(NULL));
+			enemys->hp = enemys->hp - ((rand() % heros->damageMin) + heros->damageMax);
+		}
+		else if (wybor == 2)
+		{
+			tura_herosa(heros, enemys);
+		}
+		else
+		{
+			umiejetnosc_specjalna(heros, enemys);
+		}
+	}
 
 
 
@@ -140,6 +175,7 @@ public:
 	explicit Enemys(string = "Org", int = 1, int = 1, int = 1);
 	virtual ~Enemys();
 
+	
 
 
 
@@ -154,7 +190,9 @@ public:
 	friend void tura_herosa(Heros* heros, Enemys* enemys);
 	friend void staty_enemys(Heros* heros, Enemys* enemys);
 	friend void lvl_up(Heros* heros, Enemys* enemys);
-
+	friend void umiejetnosc_specjalna(Heros* heros, Enemys* enemys);
+	
+	
 	
 };
 
@@ -166,6 +204,8 @@ public:
 
 	Ogr(string = "Org", int = 50, int = 50, int = 10);
 	~Ogr();
+	
+	
 };
 
 
