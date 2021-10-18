@@ -66,7 +66,7 @@ public:
 		int = 1, int = 1, string = "klasa", int = 1, string = "brak", string = "brak");
 	virtual ~Heros();
 
-	virtual void umiejetnosc_specjalna(Heros* heros, Enemys* enemys) = 0;
+	virtual void umiejetnosc_specjalna(Enemys* enemys) = 0;
 
 	friend void staty_enemys(Heros* heros, Enemys* enemys);
 	friend void powitanie(const Heros* heros);
@@ -83,7 +83,7 @@ public:
 	friend void walka(Heros* heros, Enemys* enemys);
 	friend void tura_herosa(Heros* heros, Enemys* enemys);
 	friend void lvl_up(Heros* heros, Enemys* enemys);
-	
+	friend void umiejetnosc_specjalna(Enemys* enemys);
 
 
 
@@ -102,7 +102,7 @@ public:
 
 
 
-	virtual void umiejetnosc_specjalna(Heros* heros, Enemys* enemys)
+	 void umiejetnosc_specjalna(Enemys* enemys)
 	{
 		cout << "Opis umiejetnosci:" << endl;
 		cout << "Bohater traci 10pnkt zycia lecz wyprowadza atak 2 razy" << endl;
@@ -116,20 +116,20 @@ public:
 		cin >> wybor;
 		if (wybor == 1)
 		{
-			heros->hp = heros->hp - 10;
+			this->hp = this->hp - 10;
 			srand(time(NULL));
-			enemys->hp = enemys->hp - ((rand() % heros->damageMin) + heros->damageMax);
+			this->hp = this->hp - ((rand() % this->damageMin) + this->damageMax);
 
 			srand(time(NULL));
-			enemys->hp = enemys->hp - ((rand() % heros->damageMin) + heros->damageMax);
+			this->hp = this->hp - ((rand() % this->damageMin) + this->damageMax);
 		}
 		else if (wybor == 2)
 		{
-			tura_herosa(heros, enemys);
+			tura_herosa(this, enemys);
 		}
 		else
 		{
-			umiejetnosc_specjalna(heros, enemys);
+			umiejetnosc_specjalna(enemys);
 		}
 	}
 
@@ -151,7 +151,10 @@ public:
 		int = 1, int = 1, int = 1, string = "Mag", int = 1, string = "brak", string = "brak");
 	~Mag();
 
-
+	 void umiejetnosc_specjalna(Enemys*enemys)
+	{
+		;
+	}
 
 
 };
@@ -190,7 +193,7 @@ public:
 	friend void tura_herosa(Heros* heros, Enemys* enemys);
 	friend void staty_enemys(Heros* heros, Enemys* enemys);
 	friend void lvl_up(Heros* heros, Enemys* enemys);
-	friend void umiejetnosc_specjalna(Heros* heros, Enemys* enemys);
+	friend void Heros::umiejetnosc_specjalna(Enemys* enemys);
 	
 	
 	

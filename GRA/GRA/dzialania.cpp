@@ -357,7 +357,7 @@ void tura_herosa(Heros* heros, Enemys* enemys)
 	}
 	else if (wybor == 2)
 	{
-		heros->umiejetnosc_specjalna(heros,enemys);
+		heros->umiejetnosc_specjalna(enemys);
 	}
 	else if (wybor == 3)
 	{
