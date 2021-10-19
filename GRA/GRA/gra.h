@@ -36,6 +36,7 @@ void walka(Heros* heros, Enemys* enemys);
 
 
 
+
 //FUNCKJA WIRTUALNA DLA BOHETEROW GLOWNYCH
 class Heros
 {
@@ -83,9 +84,9 @@ public:
 	friend void walka(Heros* heros, Enemys* enemys);
 	friend void tura_herosa(Heros* heros, Enemys* enemys);
 	friend void lvl_up(Heros* heros, Enemys* enemys);
-	friend void umiejetnosc_specjalna(Enemys* enemys);
+	
 
-
+	
 
 
 };
@@ -100,7 +101,7 @@ public:
 		int = 11, int = 30, string = "Wojownik", int = 1000, string = "brak", string = "brak");
 	~Wojownik();
 
-
+	
 
 	 void umiejetnosc_specjalna(Enemys* enemys)
 	{
@@ -118,10 +119,11 @@ public:
 		{
 			this->hp = this->hp - 10;
 			srand(time(NULL));
-			this->hp = this->hp - ((rand() % this->damageMin) + this->damageMax);
+			enemys->hp = enemys->hp - ((rand() % this->damageMin) + this->damageMax);
 
 			srand(time(NULL));
-			this->hp = this->hp - ((rand() % this->damageMin) + this->damageMax);
+			enemys->hp = enemys->hp - ((rand() % this->damageMin) + this->damageMax);
+			cout << endl;
 		}
 		else if (wybor == 2)
 		{
@@ -151,10 +153,40 @@ public:
 		int = 1, int = 1, int = 1, string = "Mag", int = 1, string = "brak", string = "brak");
 	~Mag();
 
+	
+	
+
 	 void umiejetnosc_specjalna(Enemys*enemys)
-	{
-		;
-	}
+	 {
+		 cout << "Opis umiejetnosci:" << endl;
+		 cout << "Bohater traci 10pnkt zycia lecz wyprowadza atak 2 razy" << endl;
+		 cout << "Specjalnej umiejetnosci w pojedynku mozna uzyc tylko raz!!!" << endl;
+		 cout << endl;
+		 cout << endl;
+		 cout << "Czy chcesz uzyt umiejetnosci" << endl;
+		 cout << endl;
+		 cout << "1.TAK / 2.NIE" << endl;
+		 int wybor;
+		 cin >> wybor;
+		 if (wybor == 1)
+		 {
+			 this->hp = this->hp - 10;
+			 srand(time(NULL));
+			 enemys->hp = enemys->hp - ((rand() % this->damageMin) + this->damageMax);
+
+			 srand(time(NULL));
+			 enemys->hp = enemys->hp - ((rand() % this->damageMin) + this->damageMax);
+			 cout << endl;
+		 }
+		 else if (wybor == 2)
+		 {
+			 tura_herosa(this, enemys);
+		 }
+		 else
+		 {
+			 umiejetnosc_specjalna(enemys);
+		 }
+	 }
 
 
 };
@@ -193,7 +225,8 @@ public:
 	friend void tura_herosa(Heros* heros, Enemys* enemys);
 	friend void staty_enemys(Heros* heros, Enemys* enemys);
 	friend void lvl_up(Heros* heros, Enemys* enemys);
-	friend void Heros::umiejetnosc_specjalna(Enemys* enemys);
+	friend void Wojownik::umiejetnosc_specjalna(Enemys* enemys);
+	friend void Mag::umiejetnosc_specjalna(Enemys* enemys);
 	
 	
 	
@@ -208,6 +241,10 @@ public:
 	Ogr(string = "Org", int = 50, int = 50, int = 10);
 	~Ogr();
 	
+	friend void Wojownik::umiejetnosc_specjalna(Enemys* enemys);
+	friend void Mag::umiejetnosc_specjalna(Enemys* enemys);
+
+
 	
 };
 
@@ -221,6 +258,9 @@ public:
 
 	Smok(string = "Smok", int = 1, int = 1, int = 1);
 	~Smok();
+
+	friend void Wojownik::umiejetnosc_specjalna(Enemys* enemys);
+	friend void Mag::umiejetnosc_specjalna(Enemys* enemys);
 };
 
 class Demon :public Enemys
@@ -231,4 +271,7 @@ class Demon :public Enemys
 public:
 	Demon(string = "Demon", int = 1, int = 1, int = 1);
 	~Demon();
+
+	friend void Wojownik::umiejetnosc_specjalna(Enemys* enemys);
+	friend void Mag::umiejetnosc_specjalna(Enemys* enemys);
 };

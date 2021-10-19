@@ -1,1 +1,37 @@
-﻿  GRA.vcxproj -> C:\Nauka\GRA\GRA\Debug\GRA.exe
+﻿  dzialania.cpp
+C:\Nauka\GRA\GRA\GRA\gra.h(128,14): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Nauka\GRA\GRA\GRA\gra.h(129,1): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "Enemys"
+C:\Nauka\GRA\GRA\GRA\gra.h(11): message : zobacz deklarację „Enemys”
+C:\Nauka\GRA\GRA\GRA\gra.h(131,14): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Nauka\GRA\GRA\GRA\gra.h(132,1): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "Enemys"
+C:\Nauka\GRA\GRA\GRA\gra.h(11): message : zobacz deklarację „Enemys”
+C:\Nauka\GRA\GRA\GRA\dzialania.cpp(362,13): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  main.cpp
+C:\Nauka\GRA\GRA\GRA\gra.h(128,14): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Nauka\GRA\GRA\GRA\gra.h(129,1): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "Enemys"
+C:\Nauka\GRA\GRA\GRA\gra.h(11): message : zobacz deklarację „Enemys”
+C:\Nauka\GRA\GRA\GRA\gra.h(131,14): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Nauka\GRA\GRA\GRA\gra.h(132,1): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "Enemys"
+C:\Nauka\GRA\GRA\GRA\gra.h(11): message : zobacz deklarację „Enemys”
+  gra.cpp
+C:\Nauka\GRA\GRA\GRA\gra.h(128,14): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Nauka\GRA\GRA\GRA\gra.h(129,1): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "Enemys"
+C:\Nauka\GRA\GRA\GRA\gra.h(11): message : zobacz deklarację „Enemys”
+C:\Nauka\GRA\GRA\GRA\gra.h(131,14): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Nauka\GRA\GRA\GRA\gra.h(132,1): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "Enemys"
+C:\Nauka\GRA\GRA\GRA\gra.h(11): message : zobacz deklarację „Enemys”
+  lokacje.cpp
+C:\Nauka\GRA\GRA\GRA\gra.h(128,14): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Nauka\GRA\GRA\GRA\gra.h(129,1): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "Enemys"
+C:\Nauka\GRA\GRA\GRA\gra.h(11): message : zobacz deklarację „Enemys”
+C:\Nauka\GRA\GRA\GRA\gra.h(131,14): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Nauka\GRA\GRA\GRA\gra.h(132,1): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "Enemys"
+C:\Nauka\GRA\GRA\GRA\gra.h(11): message : zobacz deklarację „Enemys”
+  enemy.cpp
+C:\Nauka\GRA\GRA\GRA\gra.h(128,14): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Nauka\GRA\GRA\GRA\gra.h(129,1): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "Enemys"
+C:\Nauka\GRA\GRA\GRA\gra.h(11): message : zobacz deklarację „Enemys”
+C:\Nauka\GRA\GRA\GRA\gra.h(131,14): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Nauka\GRA\GRA\GRA\gra.h(132,1): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "Enemys"
+C:\Nauka\GRA\GRA\GRA\gra.h(11): message : zobacz deklarację „Enemys”
+  Generowanie kodu...

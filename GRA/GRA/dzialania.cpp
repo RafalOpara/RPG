@@ -258,6 +258,13 @@ void walka(Heros* heros, Enemys* enemys)
 				
 				tura_herosa(heros, enemys);
 				
+				if (enemys->hp <= 0 || heros->hp <= 0)
+				{
+					break;
+				}
+				cout << endl;
+				cout << endl;
+				cout << endl;
 
 			}
 
@@ -368,6 +375,22 @@ void tura_herosa(Heros* heros, Enemys* enemys)
 		cout << "Musisz wybrac jedna z powyzszych opcji!!" << endl;
 		tura_herosa(heros, enemys);
 	}
+
+	cout << endl;
+	cout << endl;
+	cout << endl;
+
+	staty(heros, enemys);
+
+	cout << endl;
+	cout << endl;
+	cout << endl;
+
+	staty_enemys(heros, enemys);
+
+	cout << endl;
+	cout << endl;
+	cout << endl;
 }
 
 void lvl_up(Heros* heros, Enemys* enemys)
